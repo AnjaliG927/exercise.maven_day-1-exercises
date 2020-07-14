@@ -4,27 +4,57 @@ package com.github.perscholas;
  * Created by leon on 7/14/2020.
  */
 public class GradeEvaluator {
+    char gradeChar;
+
+
     public Boolean isGradeA(Double score) {
-        return null;
+        if(score<=100 && score>=90){
+            return true;
+        }else
+            return false;
     }
 
     public Boolean isGradeB(Double score) {
-        return null;
+        if(score<=89 && score>=80){
+            return true;
+        }else
+            return false;
     }
 
     public Boolean isGradeC(Double score) {
-        return null;
+        if(score<=79 && score>=70){
+            return true;
+        }else
+            return false;
     }
 
     public Boolean isGradeD(Double score) {
-        return null;
+        if(score<=69 && score>=65){
+            return true;
+        }else
+            return false;
     }
 
     public Boolean isGradeF(Double score) {
-        return null;
+        if(score<64){
+            return true;
+        }else
+            return false;
     }
 
     public Character getGrade(Double score) {
-        return null;
+        if(isGradeD(score)){
+            gradeChar='D' ;
+            }else if(isGradeC(score)){
+            gradeChar='C';
+            }else if(isGradeB(score)) {
+            gradeChar = 'B';
+            }else if(isGradeA(score)) {
+            gradeChar = 'A';
+            }else {
+            gradeChar = 'F';
+            }
+
+             return gradeChar;
     }
 }
